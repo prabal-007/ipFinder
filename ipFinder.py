@@ -7,8 +7,6 @@ def ipfinder():
     host = s.gethostbyname(hostname)
     ipvar.set(f'{host}')
 
-
-
 root = Tk()
 root.configure(background='bisque')
 root.geometry('300x300')
