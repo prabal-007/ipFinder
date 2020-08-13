@@ -1,11 +1,13 @@
 from tkinter import *
-import socket
+import socket as s
 
 def ipfinder():
-    hostname = socket.gethostname()
-    hostvar.set(f' {hostname}')
-    host = socket.gethostbyname(hostname)
-    ipvar.set(f'     {host}')
+    hostname = hostvar.get()
+    hostvar.set(f'{hostname}')
+    host = s.gethostbyname(hostname)
+    ipvar.set(f'{host}')
+
+
 
 root = Tk()
 root.configure(background='bisque')
@@ -24,5 +26,5 @@ ipvar=StringVar()
 ipvar.set(f'\t**********')
 ipentry = Entry(root, textvariable=ipvar, font='arial 10')
 ipentry.pack()
-Button(root,text='Get Ip',bg='gold', font='arial 10 bold', command=ipfinder).pack(padx='10',pady='10')
+Button(root,text='Get my Ip',bg='gold', font='arial 10 bold', command=ipfinder).pack(padx='10',pady='10')
 root.mainloop()
