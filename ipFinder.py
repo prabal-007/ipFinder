@@ -16,7 +16,6 @@ def myip():
     Entry(root,textvariable=myip,font='arial 10').pack()
     ipbutton.config(state=DISABLED)
 
-
 root = Tk()
 root.configure(background='bisque')
 root.geometry('300x330')
